@@ -15,6 +15,8 @@ void main() {
   // This will allow us to handle all transitions and errors in SimpleBlocDelegate.
   BlocSupervisor.delegate = SimpleBlocDelegate();
   runApp(
+    //: Using block provider to provide TodosBloc to Widget down under
+    //: as per the rules to
     BlocProvider(
       create: (context) {
         return TodosBloc(
